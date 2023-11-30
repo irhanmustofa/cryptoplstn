@@ -28,6 +28,23 @@
 
     <!--custom css-->
     <link href="assets/css/main.css" rel="stylesheet" />
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .banner-img {
+            animation: fadeInUp 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+    </style>
 </head>
 
 <body class="">
@@ -114,6 +131,36 @@
                             <a href="javascript:;" class="btn btn-white btn-pill mb-3 text-uppercase">Support Us</a>
                         </div>
                     </div>
+                    <style>
+                        @keyframes moveUpDown {
+
+                            0%,
+                            100% {
+                                transform: translateY(0);
+                            }
+
+                            50% {
+                                transform: translateY(-20px);
+                            }
+                        }
+
+                        @keyframes fadeInUp {
+                            from {
+                                opacity: 0;
+                                transform: translateY(10px);
+                            }
+
+                            to {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
+
+                        .banner-img {
+                            animation: fadeInUp 1s ease-out, zoomIn 1s ease-out, moveUpDown 2s infinite ease-in-out;
+                        }
+                    </style>
+
                     <div class="col-lg-5 col-md-12">
                         <img class="banner-img" src="assets/img/home.png" alt="" />
                     </div>

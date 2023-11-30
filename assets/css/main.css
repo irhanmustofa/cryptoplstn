@@ -41,6 +41,66 @@ html {
   height: 100%;
 }
 
+/* animated hero */
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bubble-set {
+  position: relative;
+  margin-top: 20px;
+  /* Adjust as needed */
+}
+
+.bubble-lg,
+.bubble-md,
+.bubble-sm {
+  width: 50px;
+  height: 50px;
+  background-color: #3498db;
+  /* Adjust as needed */
+  border-radius: 50%;
+  position: absolute;
+  animation: wave 2s infinite;
+  /* Adjust the duration as needed */
+}
+
+.bubble-md {
+  width: 40px;
+  height: 40px;
+  background-color: #2ecc71;
+  /* Adjust as needed */
+  top: 50px;
+  /* Adjust as needed */
+  left: 30px;
+  /* Adjust as needed */
+  animation-delay: 0.5s;
+  /* Adjust the delay as needed */
+}
+
+.bubble-sm {
+  width: 30px;
+  height: 30px;
+  background-color: #e74c3c;
+  /* Adjust as needed */
+  top: 100px;
+  /* Adjust as needed */
+  left: 60px;
+  /* Adjust as needed */
+  animation-delay: 1s;
+  /* Adjust the delay as needed */
+}
+
 a {
   color: #b2192c;
 }
