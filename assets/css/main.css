@@ -24,12 +24,12 @@ Table of contents
 typography
 -------------------------------*/
 body {
-  font-family: "Roboto Slab", serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.5;
 
-  color: #3c434f;
+  color: rgb(48, 8, 8);
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -67,7 +67,7 @@ html {
 .bubble-sm {
   width: 50px;
   height: 50px;
-  background-color: #3498db;
+  background-color: #ffffff;
   /* Adjust as needed */
   border-radius: 50%;
   position: absolute;
@@ -355,8 +355,8 @@ buttons
 .btn-gradient {
   color: #fff;
   border: none;
-  background-image: -webkit-linear-gradient(left, #d17580 0%, #e3acb3 100%);
-  background-image: linear-gradient(to right, #d17580 0%, #e3acb3 100%);
+  background-image: -webkit-linear-gradient(left, #ff5a6e 0%, #a90015 100%);
+  background-image: linear-gradient(to right, #ff5a6e 0%, #a90015 100%);
   /* box-shadow: 5px 5px 40px 0 rgba(110, 220, 170, 0.72); */
 }
 .btn-gradient:hover {
@@ -568,8 +568,9 @@ hero banner
 }
 .hero-banner .banner-img {
   position: absolute;
-  top: 0;
-  right: 0;
+  /* top: 0;
+  right: 0; */
+  /* top: 50%; */
 }
 .hero-banner .hero-text {
   position: absolute;
@@ -583,21 +584,36 @@ hero banner
   -ms-transform: translateY(-40%);
   transform: translateY(-40%);
 }
-.hero-banner .hero-title {
-  font-size: 48px;
+.hero-banner .hero-title1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 70px;
 
   margin-bottom: 1rem;
 
-  color: #7954ff;
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(92, 0, 0, 1) 0%,
+    rgba(163, 0, 0, 1) 49%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-banner .hero-title {
+  font-size: 68px;
+
+  margin-bottom: 1rem;
+
+  color: #000000;
 }
 .hero-banner .here-sub-title {
-  font-size: 24px;
-  font-weight: 300;
-  line-height: normal;
+  /* font-family: "proxima-nova", sans-serif; */
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5rem;
 
   margin-bottom: 3rem;
 
-  color: #707070;
+  color: #1b1b1b;
 }
 
 .creative-banner {
@@ -607,8 +623,13 @@ hero banner
 
   height: 100%;
 
-  background: -webkit-linear-gradient(230deg, #b2192c 0%, #b2192c 100%);
-  background: linear-gradient(220deg, #b2192c 0%, #b2192c 100%);
+  background: rgb(255, 184, 184);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 184, 184, 1) 0%,
+    rgba(255, 149, 149, 1) 46%,
+    rgba(255, 223, 223, 1) 100%
+  );
 }
 .creative-banner .hero-text {
   z-index: 10;
@@ -620,9 +641,9 @@ hero banner
 }
 .creative-banner .banner-img {
   position: relative;
-  top: -20%;
+  /* top: -20%; */
 }
-.creative-banner .hero-footer {
+/* .creative-banner .hero-footer {
   position: absolute;
   z-index: 1;
   bottom: -10px;
@@ -634,7 +655,7 @@ hero banner
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
-}
+} */
 @media (min-width: 1600px) {
   .creative-banner .hero-footer {
     height: 300px;
@@ -684,6 +705,16 @@ dark theme
 -------------------------------*/
 .dark-theme .hero-banner .here-sub-title {
   color: #fff;
+}
+
+.here-sub-title2 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.85rem;
+
+  margin-bottom: 3rem;
+
+  color: #5f5f5f;
 }
 
 /*-------------------------------
@@ -2208,7 +2239,13 @@ responsive style
     color: #fff;
   }
   .hero-banner {
-    background: #b2192d;
+    background: rgb(144, 57, 57);
+    background: linear-gradient(
+      90deg,
+      rgba(144, 57, 57, 1) 0%,
+      rgba(209, 95, 95, 1) 46%,
+      rgba(255, 219, 219, 1) 100%
+    );
   }
   .hero-banner .hero-title {
     font-size: 36px;
@@ -2613,4 +2650,182 @@ responsive style
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* Card Bantuan */
+
+.lead {
+  color: #aaa;
+}
+
+.wrapper {
+  margin: 10vh;
+}
+
+.card {
+  border: none;
+  transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  overflow: hidden;
+  border-radius: 20px;
+  min-height: 450px;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 768px) {
+    min-height: 350px;
+  }
+
+  @media (max-width: 420px) {
+    min-height: 300px;
+  }
+
+  &.card-has-bg {
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: inherit;
+      -webkit-filter: grayscale(1);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+
+    &:hover {
+      transform: scale(0.98);
+      box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.3);
+      background-size: 130%;
+      transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+
+      .card-img-overlay {
+        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+        background: rgb(255, 158, 158);
+        background: linear-gradient(
+          0deg,
+          rgba(255, 33, 33, 0.5) 0%,
+          rgb(99, 66, 66) 100%
+        );
+      }
+    }
+  }
+  .card-footer {
+    background: none;
+    border-top: none;
+    .media {
+      img {
+        border: solid 3px rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+  .card-title {
+    font-weight: 800;
+  }
+  .card-meta {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  .card-body {
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  &:hover {
+    .card-body {
+      margin-top: 30px;
+      transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    cursor: pointer;
+    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .card-img-overlay {
+    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+    background: rgba(255, 158, 158, 0.356);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 33, 33, 0.432) 0%,
+      rgb(172, 113, 113) 100%
+    );
+  }
+}
+@media (max-width: 767px) {
+}
+
+/* Card Service */
+.social-box .box {
+  background: rgb(255, 184, 184);
+  background: linear-gradient(
+    117deg,
+    rgba(255, 184, 184, 1) 0%,
+    rgba(255, 149, 149, 1) 46%,
+    rgba(255, 223, 223, 1) 100%
+  );
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 20px 0;
+  padding: 40px 10px;
+  transition: all 0.5s ease-out;
+}
+
+.social-box .box:hover {
+  background: rgb(255, 184, 184);
+  background: linear-gradient(
+    117deg,
+    rgb(252, 159, 159) 0%,
+    rgb(255, 248, 248) 46%,
+    rgb(226, 141, 141) 100%
+  );
+  box-shadow: 0 0 6px #520000;
+}
+
+.social-box .box-text {
+  font-size: 15px;
+  line-height: 30px;
+  margin: 20px 0;
+}
+
+.social-box .box-btn a {
+  color: #4183d7;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.social-box .fa {
+  color: #4183d7;
+}
+
+/* card tweet */
+.card {
+  background-color: rgb(255, 210, 210);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  width: 20%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.card-title {
+  margin-top: 20px;
+}
+
+.card-text {
+  margin-bottom: 10px;
+}
+
+.card-subtitle {
+  margin-bottom: 15px;
+}
+
+.btn-pill {
+  border-radius: 30px;
 }
